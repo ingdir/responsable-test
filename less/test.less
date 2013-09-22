@@ -1,0 +1,75 @@
+@import 'grid.less';
+
+body {
+    font: normal 12px sans-serif;
+
+    padding: 10px;
+}
+
+.page {
+    max-width: 1000px;
+}
+
+.fill {
+    width: 100%;
+    min-height: 50px;
+
+    box-shadow: 0 0 10px #666 inset;
+
+    &:after {
+        display: inline;
+        content: 'CSS is awesome';
+    }
+}
+
+.row {
+    .row();
+
+    margin-bottom: 10px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.column-12 {
+    .column(12);
+
+    &_indented {
+        .column(12, 20px);
+    }
+
+}
+
+.column-18 {
+    .column(18);
+
+    &_indented {
+        .column(18, 20px);
+    }
+
+}
+
+.column-6 {
+    .column(3);
+    .push(2);
+    .pull(1);
+}
+
+.subcol {
+    .column(1, @gutter_width, 18);
+
+    background-color: #ffffbb;
+    &_container {
+        .column(5, @gutter_width, 18);
+
+        .push(1, 18);
+        .pull(1, 18);
+    }
+}
+
+.subsub {
+    .column(1, 5px, 5);
+    background-color: #FFEFAE;
+}
+

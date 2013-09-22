@@ -1,0 +1,132 @@
+/**
+ * Grid
+ *
+ * Set up responsive grid system.
+ * 
+ * This is heavily infleuenced by the Semantic Grid http://semantic.gs
+ *
+ * @author Abban Dunne http://abandon.ie
+ * @author James Wilson http://jimmynotjim.com
+ * @version 1.1
+ */
+
+/* Grid options */
+@gutter_width: 0;
+// Your gutter width
+@columns: 24;
+// The amount of columns you want
+@max_width: 100%;
+// Set a maximum width of the site
+
+// Half the gutter for borders, margin, padding etc
+@gutter: @gutter_width*0.5;
+
+/* Utility variable — you should never need to modify this */
+@gridsystem_width: @columns * 1px;
+@padding: @gutter_width*0.5;
+
+/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
+.clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Ensure grid columns are set to border-boxes. This is essential */
+.border-box() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Our row container */
+.row(@padding:0) {
+    .clearfix();
+    .border-box();
+
+    display: block;
+    max-width: @max_width;
+    margin: 0 auto;
+    padding: 0 @padding;
+
+    // FIXME remove debug
+    .row-debug();
+}
+
+/* Our column container */
+.column(@x, @padding:@padding, @columns:@columns) {
+    .border-box();
+
+    display: inline;
+    float: left;
+    width: 100%*(@x / @columns);
+    padding: 0 @padding;
+
+    // FIXME remove debug
+    .column-debug(@x, @padding);
+}
+
+/* Push adds left padding */
+.push(@offset:1, @columns:@columns) {
+    margin-left: 100%*(@offset / @columns);
+}
+
+/* Pull adds right padding */
+.pull(@offset:1, @columns:@columns) {
+    margin-right: 100%*(@offset / @columns);
+}
+
+/* Debug mixins, FIXME remove these (and references!) */
+.row-debug() {
+    outline: solid 1px #ccc;
+    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+}
+
+.column-debug(@x, @padding) {
+    position: relative;
+    background-color: #fff;
+    outline: dotted 1px #333;
+
+    &:hover {
+        outline: solid 1px #f09900;
+    }
+
+    &:hover:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: #fc0;
+        opacity: .2;
+
+        content: '';
+    }
+
+    &:hover:after {
+        font: normal 10px sans-serif;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: inline-block;
+
+        text-align: center;
+
+        color: #333;
+        background-color: #ffffbb;
+        outline: solid 1px #f09900;
+
+        content: ~"'@{x} @{padding}'";
+    }
+}
+/* End of debug mixins */

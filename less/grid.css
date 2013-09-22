@@ -1,0 +1,21 @@
+/**
+ * Grid
+ *
+ * Set up responsive grid system.
+ * 
+ * This is heavily infleuenced by the Semantic Grid http://semantic.gs
+ *
+ * @author Abban Dunne http://abandon.ie
+ * @author James Wilson http://jimmynotjim.com
+ * @version 1.1
+ */
+/* Grid options */
+/* Utility variable — you should never need to modify this */
+/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
+/* Ensure grid columns are set to border-boxes. This is essential */
+/* Our row container */
+/* Our column container */
+/* Push adds left padding */
+/* Pull adds right padding */
+/* Debug mixins, FIXME remove these (and references!) */
+/* End of debug mixins */
