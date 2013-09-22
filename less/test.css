@@ -69,11 +69,11 @@ body {
   width: 50%;
   padding: 0 0;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
 }
 .column-12:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .column-12:hover:before {
   display: block;
@@ -107,11 +107,11 @@ body {
   width: 50%;
   padding: 0 20px;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
 }
 .column-12_indented:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .column-12_indented:hover:before {
   display: block;
@@ -145,11 +145,11 @@ body {
   width: 75%;
   padding: 0 0;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
 }
 .column-18:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .column-18:hover:before {
   display: block;
@@ -183,11 +183,11 @@ body {
   width: 75%;
   padding: 0 20px;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
 }
 .column-18_indented:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .column-18_indented:hover:before {
   display: block;
@@ -221,13 +221,13 @@ body {
   width: 12.5%;
   padding: 0 0;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
   margin-left: 8.333333333333332%;
   margin-right: 4.166666666666666%;
 }
 .column-6:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .column-6:hover:before {
   display: block;
@@ -261,12 +261,12 @@ body {
   width: 5.555555555555555%;
   padding: 0 0;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
   background-color: #ffffbb;
 }
 .subcol:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .subcol:hover:before {
   display: block;
@@ -300,13 +300,13 @@ body {
   width: 27.77777777777778%;
   padding: 0 0;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
   margin-left: 5.555555555555555%;
   margin-right: 5.555555555555555%;
 }
 .subcol_container:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .subcol_container:hover:before {
   display: block;
@@ -340,12 +340,12 @@ body {
   width: 20%;
   padding: 0 5px;
   position: relative;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
   outline: dotted 1px #333;
   background-color: #FFEFAE;
 }
 .subsub:hover {
-  outline: solid 1px #f09900;
+  outline: solid 2px #f09900;
 }
 .subsub:hover:before {
   display: block;
